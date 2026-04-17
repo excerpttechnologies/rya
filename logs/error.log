@@ -1,0 +1,561 @@
+[2026-04-17 14:05:10] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 14:09:06] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:08] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:09] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:10] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:11] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:12] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:19] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:20] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:21] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:21] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:21] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:22] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:23] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:24] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:24] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:09:32] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:10:25] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:10:28] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:14:58] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:14:59] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:14:59] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:15:00] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:15:00] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:15:00] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+CastError: Cast to ObjectId failed for value "" (type string) at path "_id" for model "Customer"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:100:20
+[2026-04-17 14:32:32] [31merror[39m: ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+    at Document.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3381:32)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3142:17
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2026-04-17 14:32:49] [31merror[39m: ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+    at Document.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3381:32)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3142:17
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2026-04-17 14:32:51] [31merror[39m: ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+ValidationError: Invoice validation failed: parts.0.items.2.description: Path `description` is required.
+    at Document.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3381:32)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at Subdocument.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\types\subdocument.js:257:12)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3142:17
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2026-04-17 15:29:15] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 15:29:16] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 15:33:42] [31merror[39m: ValidationError: ScrumEntry validation failed: project: Cast to ObjectId failed for value "" (type string) at path "project" because of "BSONError"
+ValidationError: ScrumEntry validation failed: project: Cast to ObjectId failed for value "" (type string) at path "project" because of "BSONError"
+    at Document.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3381:32)
+    at model.$set (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:1498:12)
+    at model.$set (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:1150:16)
+    at model.Document (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:180:12)
+    at model.Model (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:127:12)
+    at new model (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:4866:15)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:2791:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:2779:34)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:434:34
+[2026-04-17 15:34:21] [31merror[39m: ValidationError: ScrumEntry validation failed: project: Cast to ObjectId failed for value "" (type string) at path "project" because of "BSONError"
+ValidationError: ScrumEntry validation failed: project: Cast to ObjectId failed for value "" (type string) at path "project" because of "BSONError"
+    at Document.invalidate (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:3381:32)
+    at model.$set (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:1498:12)
+    at model.$set (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:1150:16)
+    at model.Document (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\document.js:180:12)
+    at model.Model (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:127:12)
+    at new model (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:4866:15)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:2791:20
+    at Array.map (<anonymous>)
+    at Function.create (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\model.js:2779:34)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:434:34
+[2026-04-17 15:34:59] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 15:37:49] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 15:38:14] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 15:39:44] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:03:52] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:14:20] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:38:38] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:38:55] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:41:47] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:43:56] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:47:35] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:48:05] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 16:48:44] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:15:08] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:15:43] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:16:56] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:17:16] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:17:41] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:17:56] [31merror[39m: Groq AI Error: 401 {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+[2026-04-17 17:18:40] [31merror[39m: Groq AI Error: 400 {"error":{"message":"The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}
+[2026-04-17 17:33:07] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:33:08] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:33:15] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:33:17] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:37:57] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:37:58] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:38:10] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:38:11] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:38:36] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:38:37] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:45:47] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:45:48] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:48:09] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 17:48:10] [31merror[39m: ReferenceError: Customer is not defined
+ReferenceError: Customer is not defined
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:517:64
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\route.js:119:3)
+    at newFn (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express-async-errors\index.js:16:20)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\express\lib\router\index.js:280:10)
+[2026-04-17 18:29:58] [31merror[39m: CastError: Cast to ObjectId failed for value "" (type string) at path "employee" for model "Salary"
+CastError: Cast to ObjectId failed for value "" (type string) at path "employee" for model "Salary"
+    at SchemaObjectId.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Downloads\excerpt-erp-v2\excerpt-erp\backend\src\routes\allRoutes.js:279:20
