@@ -1,9 +1,9 @@
 node_modules/
-dist/
+
 build/
 node_modules
 .env
-dist
+
 *.log
 logs/
 uploads/
