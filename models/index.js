@@ -328,6 +328,8 @@ const scrumEntrySchema = new mongoose.Schema({
 // ========== QUOTATION MODEL ==========
 const quotationSchema = new mongoose.Schema({
   quotationNumber: { type: String, unique: true, required: true },
+  quotationTitle: { type: String, default: '' },
+  customerAddress: { type: String, default: '' },
   quotationDate: { type: Date, default: Date.now },
   validUntil: Date,
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'Customer', required: true },
@@ -351,6 +353,7 @@ const quotationSchema = new mongoose.Schema({
   convertedToInvoice: { type: mongoose.Schema.Types.ObjectId, ref: 'Invoice' },
   convertedAt: Date,
   notes: String,
+  features: String,
   termsAndConditions: String,
   aiGenerated: { type: Boolean, default: false },
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
