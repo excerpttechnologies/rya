@@ -5,6 +5,7 @@ const companySchema = new mongoose.Schema({
   tagline: { type: String },
   gstin: { type: String },
   pan: { type: String },
+  lutNo: { type: String },
   cin: { type: String },
   address: {
     line1: { type: String },
