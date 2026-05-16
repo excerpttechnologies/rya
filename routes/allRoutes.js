@@ -64,17 +64,56 @@ module.exports.customerRouter = customerRouter;
 
 // ---- INVOICES ----
 const invoiceRouter = express.Router();
-const { getInvoices, getInvoice, createInvoice, updateInvoice, recordPayment, cancelInvoice, generateFromCustomer: genInvoice, convertFromQuotation, getInvoiceStats } = require('../controllers/invoiceController');
+const {
+  getInvoices,
+  getInvoice,
+  createInvoice,
+  updateInvoice,
+  recordPayment,
+  cancelInvoice,
+  cloneInvoice,
+  deleteInvoice,
+  resequenceInvoices,                                                           // ← NEW
+  generateFromCustomer: genInvoice,
+  convertFromQuotation,
+  getInvoiceStats,
+} = require('../controllers/invoiceController');
+
 invoiceRouter.use(protect);
-invoiceRouter.get('/', checkPermission('invoices'), getInvoices);
-invoiceRouter.post('/', checkPermission('invoices'), createInvoice);
-invoiceRouter.get('/stats', checkPermission('invoices'), getInvoiceStats);
-invoiceRouter.get('/:id', checkPermission('invoices'), getInvoice);
-invoiceRouter.put('/:id', checkPermission('invoices'), updateInvoice);
-invoiceRouter.post('/:id/payment', checkPermission('invoices'), recordPayment);
-invoiceRouter.put('/:id/cancel', checkPermission('invoices'), cancelInvoice);
-invoiceRouter.get('/generate-from-customer/:customerId', checkPermission('invoices'), genInvoice);
-invoiceRouter.post('/convert-from-quotation/:quotationId', checkPermission('invoices'), convertFromQuotation);
+
+// ── Fixed-path routes MUST come before /:id ──────────────────────────────────
+invoiceRouter.get('/',                                             checkPermission('invoices'), getInvoices);
+invoiceRouter.post('/',                                            checkPermission('invoices'), createInvoice);
+invoiceRouter.get('/stats',                                        checkPermission('invoices'), getInvoiceStats);
+invoiceRouter.post('/resequence',                                  checkPermission('invoices'), resequenceInvoices); // ← NEW
+invoiceRouter.get('/generate-from-customer/:customerId',           checkPermission('invoices'), genInvoice);
+invoiceRouter.post('/convert-from-quotation/:quotationId',         checkPermission('invoices'), convertFromQuotation);
+
+// ── Dynamic /:id routes ───────────────────────────────────────────────────────
+invoiceRouter.get('/:id',                                          checkPermission('invoices'), getInvoice);
+invoiceRouter.put('/:id',                                          checkPermission('invoices'), updateInvoice);
+invoiceRouter.delete('/:id',                                       checkPermission('invoices'), deleteInvoice);
+invoiceRouter.post('/:id/clone',                                   checkPermission('invoices'), cloneInvoice);
+invoiceRouter.post('/:id/payment',                                 checkPermission('invoices'), recordPayment);
+invoiceRouter.put('/:id/cancel',                                   checkPermission('invoices'), cancelInvoice);
+
+module.exports.invoiceRouter = invoiceRouter;
+
+invoiceRouter.use(protect);
+
+invoiceRouter.get('/',                                            checkPermission('invoices'), getInvoices);
+invoiceRouter.post('/',                                           checkPermission('invoices'), createInvoice);
+invoiceRouter.get('/stats',                                       checkPermission('invoices'), getInvoiceStats);
+invoiceRouter.get('/generate-from-customer/:customerId',          checkPermission('invoices'), genInvoice);
+invoiceRouter.post('/convert-from-quotation/:quotationId',        checkPermission('invoices'), convertFromQuotation);
+
+invoiceRouter.get('/:id',                                         checkPermission('invoices'), getInvoice);
+invoiceRouter.put('/:id',                                         checkPermission('invoices'), updateInvoice);
+invoiceRouter.delete('/:id',                                      checkPermission('invoices'), deleteInvoice);   // ← NEW
+invoiceRouter.post('/:id/clone',                                  checkPermission('invoices'), cloneInvoice);    // ← NEW
+invoiceRouter.post('/:id/payment',                                checkPermission('invoices'), recordPayment);
+invoiceRouter.put('/:id/cancel',                                  checkPermission('invoices'), cancelInvoice);
+
 module.exports.invoiceRouter = invoiceRouter;
 
 // ---- QUOTATIONS ----
@@ -117,6 +156,48 @@ quotationRouter.put('/:id', checkPermission('quotations'), async (req, res) => {
   const q = await Quotation.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data: q });
 });
+
+// CLONE a quotation
+quotationRouter.post('/:id/clone', checkPermission('quotations'), async (req, res) => {
+  const Company = require('../models/Company');
+  const original = await Quotation.findById(req.params.id);
+  if (!original) return res.status(404).json({ success: false, message: 'Not found' });
+
+  const company = await Company.findOne();
+  const settings = company?.quotationSettings || { prefix: 'QT', nextNumber: 1001 };
+  const year = new Date().getFullYear();
+  const quotationNumber = `${settings.prefix}-${year}-${settings.nextNumber}`;
+  if (company) { company.quotationSettings.nextNumber += 1; await company.save(); }
+
+  const cloned = await Quotation.create({
+    customer: original.customer,
+    customerSnapshot: original.customerSnapshot,
+    customerAddress: original.customerAddress,
+    quotationTitle: original.quotationTitle,
+    parts: original.parts,
+    pricing: original.pricing,
+    notes: original.notes,
+    features: original.features,
+    termsAndConditions: original.termsAndConditions,
+    template: original.template,
+    quotationNumber,
+    quotationDate: new Date(),
+    validUntil: original.validUntil,
+    status: 'draft',
+    createdBy: req.user.id,
+  });
+
+  res.status(201).json({ success: true, data: cloned });
+});
+
+// REAL DELETE a quotation
+quotationRouter.delete('/:id', checkPermission('quotations'), async (req, res) => {
+  const q = await Quotation.findByIdAndDelete(req.params.id);
+  if (!q) return res.status(404).json({ success: false, message: 'Not found' });
+  res.json({ success: true, message: 'Deleted. Quotation number is retired and will not be reused.' });
+});
+
+
 module.exports.quotationRouter = quotationRouter;
 
 // ---- PAYMENTS ----
