@@ -36,21 +36,39 @@ router.post("/", async (req, res) => {
   try {
     const records = req.body.records;
 
-  for (const row of records) {
+ for (const row of records) {
 
-  const existing = await Attendance.findOne({
-    employee: row.employee,
-    date: {
-      $gte: new Date(new Date(row.date).setHours(0, 0, 0, 0)),
-      $lte: new Date(new Date(row.date).setHours(23, 59, 59, 999)),
+  await Attendance.findOneAndUpdate(
+    {
+      employee: row.employee,
+      date: {
+        $gte: new Date(
+          new Date(row.date).setHours(0, 0, 0, 0)
+        ),
+        $lte: new Date(
+          new Date(row.date).setHours(23, 59, 59, 999)
+        ),
+      },
     },
-  });
+    {
+      $set: {
+        employeeCode: row.employeeCode,
+        employeeName: row.employeeName,
+        department: row.department,
+        status: row.status,
+        month: row.month,
+        year: row.year,
+        checkInTime: row.checkInTime,
+        checkOutTime: row.checkOutTime,
+        date: row.date
+      }
+    },
+    {
+      upsert: true,
+      new: true
+    }
+  );
 
-  if (existing) {
-    continue;
-  }
-
-  await Attendance.create(row);
 }
 
     res.json({
