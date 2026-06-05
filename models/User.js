@@ -63,22 +63,7 @@ userSchema.pre('save', async function (next) {
 });
 
 // Set permissions based on role
-userSchema.pre('save', function (next) {
-  const rolePermissions = {
-    super_admin: Object.keys(this.permissions).reduce((acc, key) => ({ ...acc, [key]: true }), {}),
-    admin: { dashboard: true, customers: true, invoices: true, quotations: true, payments: true, suppliers: true, purchases: true, expenses: true, employees: true, salaries: true, products: true, ledger: true, reports: true, projects: true, scrum: true, leads: true, company: true, users: false, ai: true },
-    accountant: { dashboard: true, invoices: true, payments: true, expenses: true, ledger: true, reports: true, suppliers: true, purchases: true, ai: true },
-    hr: { dashboard: true, employees: true, salaries: true, ai: true },
-    scrum_master: { scrum: true },
-    manager: { dashboard: true, customers: true, leads: true, projects: true, reports: true, ai: true },
-    employee: { dashboard: true }
-  };
 
-  if (rolePermissions[this.role]) {
-    Object.assign(this.permissions, rolePermissions[this.role]);
-  }
-  next();
-});
 
 // Match password
 userSchema.methods.matchPassword = async function (enteredPassword) {

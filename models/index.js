@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Attendance = require('./Attendance');
 
 // ========== LEAD MODEL ==========
 const leadSchema = new mongoose.Schema({
@@ -212,6 +213,8 @@ salarySchema.pre('save', function (next) {
   this.netSalary = this.grossSalary - this.pf - this.esi - this.tds - deductionsTotal;
   next();
 });
+
+module.exports.Attendance = Attendance;
 
 // ========== PRODUCT MODEL ==========
 const productSchema = new mongoose.Schema({

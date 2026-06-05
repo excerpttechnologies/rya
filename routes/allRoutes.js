@@ -28,6 +28,21 @@ usersRouter.put('/:id/permissions', checkPermission('users'), async (req, res) =
   const user = await User.findByIdAndUpdate(req.params.id, { permissions: req.body.permissions }, { new: true });
   res.json({ success: true, data: user });
 });
+
+usersRouter.put('/:id/activate', checkPermission('users'), async (req, res) => {
+
+  const user = await User.findByIdAndUpdate(
+    req.params.id,
+    { isActive: true },
+    { new: true }
+  );
+
+  res.json({
+    success: true,
+    data: user
+  });
+
+});
 module.exports.usersRouter = usersRouter;
 
 // ---- COMPANY ----
@@ -319,13 +334,57 @@ const employeeRouter = express.Router();
 const { Employee } = require('../models/index');
 employeeRouter.use(protect);
 employeeRouter.get('/', checkPermission('employees'), async (req, res) => {
-  const { department, page = 1, limit = 20, search } = req.query;
-  const query = { isActive: true };
-  if (department) query.department = department;
-  if (search) { const r = new RegExp(search, 'i'); query.$or = [{ name: r }, { email: r }, { employeeCode: r }]; }
-  const total = await Employee.countDocuments(query);
-  const data = await Employee.find(query).sort('name').skip((page-1)*limit).limit(parseInt(limit));
-  res.json({ success: true, data, pagination: { total, pages: Math.ceil(total/limit) } });
+
+  const {
+    department,
+    page = 1,
+    limit = 20,
+    search,
+    status = 'all'
+  } = req.query;
+
+  const query = {};
+
+  if (status === 'active') {
+    query.isActive = true;
+  }
+
+  if (status === 'inactive') {
+    query.isActive = false;
+  }
+
+  if (department) {
+    query.department = department;
+  }
+
+  if (search) {
+    const r = new RegExp(search, 'i');
+
+    query.$or = [
+      { name: r },
+      { email: r },
+      { employeeCode: r }
+    ];
+  }
+
+  const total =
+    await Employee.countDocuments(query);
+
+  const data =
+    await Employee.find(query)
+      .sort('name')
+      .skip((page - 1) * limit)
+      .limit(parseInt(limit));
+
+  res.json({
+    success: true,
+    data,
+    pagination: {
+      total,
+      pages: Math.ceil(total / limit)
+    }
+  });
+
 });
 employeeRouter.post('/', checkPermission('employees'), async (req, res) => {
   const employee = await Employee.create(req.body);

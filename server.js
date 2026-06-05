@@ -37,6 +37,8 @@ const dashboardRoutes = require('./routes/dashboard');
 const aiRoutes = require('./routes/ai');
 const cancelledRoutes = require('./routes/cancelled');
 const auditorRoutes = require('./routes/auditor');
+const attendanceRoutes =
+require('./routes/attendance.routes');
 
 const app = express();
 
@@ -115,6 +117,10 @@ app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/cancelled', cancelledRoutes);
 app.use('/api/auditor', auditorRoutes);
+app.use(
+'/api/attendance',
+attendanceRoutes
+);
 
 app.use('/api/*', (req, res) => {
   res.status(404).json({
