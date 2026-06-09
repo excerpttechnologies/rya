@@ -20,10 +20,12 @@ usersRouter.put('/:id', checkPermission('users'), async (req, res) => {
   const user = await User.findByIdAndUpdate(req.params.id, updateData, { new: true });
   res.json({ success: true, data: user });
 });
+
 usersRouter.delete('/:id', checkPermission('users'), async (req, res) => {
-  await User.findByIdAndUpdate(req.params.id, { isActive: false });
-  res.json({ success: true, message: 'User deactivated' });
+  await User.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'User deleted' });
 });
+
 usersRouter.put('/:id/permissions', checkPermission('users'), async (req, res) => {
   const user = await User.findByIdAndUpdate(req.params.id, { permissions: req.body.permissions }, { new: true });
   res.json({ success: true, data: user });
@@ -288,6 +290,10 @@ purchaseRouter.get('/:id', checkPermission('purchases'), async (req, res) => {
   const data = await Purchase.findById(req.params.id).populate('supplier');
   res.json({ success: true, data });
 });
+purchaseRouter.delete('/:id', checkPermission('purchases'), async (req, res) => {
+  await Purchase.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Purchase deleted' });
+});
 purchaseRouter.put('/:id', checkPermission('purchases'), async (req, res) => {
   const data = await Purchase.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
@@ -395,6 +401,10 @@ employeeRouter.get('/:id', checkPermission('employees'), async (req, res) => {
   if (!data) return res.status(404).json({ success: false, message: 'Employee not found' });
   res.json({ success: true, data });
 });
+employeeRouter.delete('/:id', checkPermission('employees'), async (req, res) => {
+  await Employee.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Employee deleted' });
+});
 employeeRouter.put('/:id', checkPermission('employees'), async (req, res) => {
   const data = await Employee.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
@@ -425,6 +435,10 @@ salaryRouter.put('/:id', checkPermission('salaries'), async (req, res) => {
   const data = await Salary.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
   res.json({ success: true, data });
 });
+salaryRouter.delete('/:id', checkPermission('salaries'), async (req, res) => {
+  await Salary.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Salary record deleted' });
+});
 salaryRouter.get('/summary', checkPermission('salaries'), async (req, res) => {
   const { month, year } = req.query;
   const query = {};
@@ -451,6 +465,10 @@ productRouter.get('/:id', checkPermission('products'), async (req, res) => {
   const data = await Product.findById(req.params.id).populate('clients', 'name companyName');
   res.json({ success: true, data });
 });
+productRouter.delete('/:id', checkPermission('products'), async (req, res) => {
+  await Product.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Product deleted' });
+});
 productRouter.put('/:id', checkPermission('products'), async (req, res) => {
   const data = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
@@ -475,6 +493,10 @@ ledgerRouter.get('/', checkPermission('ledger'), async (req, res) => {
     { $group: { _id: '$type', total: { $sum: '$amount' } } }
   ]);
   res.json({ success: true, data, summary, pagination: { total, pages: Math.ceil(total/limit) } });
+});
+ledgerRouter.delete('/:id', checkPermission('ledger'), async (req, res) => {
+  await LedgerEntry.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Ledger entry deleted' });
 });
 ledgerRouter.post('/', checkPermission('ledger'), async (req, res) => {
   const entry = await LedgerEntry.create({ ...req.body, createdBy: req.user.id });
@@ -548,6 +570,11 @@ projectRouter.put('/:id', checkPermission('projects'), async (req, res) => {
   const data = await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
 });
+projectRouter.delete('/:id', checkPermission('projects'), async (req, res) => {
+  await Project.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Project deleted' });
+});
+
 projectRouter.post('/:id/update', checkPermission('projects'), async (req, res) => {
   const project = await Project.findById(req.params.id);
   if (!project) return res.status(404).json({ success: false, message: 'Project not found' });
@@ -612,6 +639,11 @@ leadRouter.get('/:id', checkPermission('leads'), async (req, res) => {
 leadRouter.put('/:id', checkPermission('leads'), async (req, res) => {
   const data = await Lead.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
+});
+
+leadRouter.delete('/:id', checkPermission('leads'), async (req, res) => {
+  await Lead.findByIdAndDelete(req.params.id);
+  res.json({ success: true, message: 'Lead deleted' });
 });
 leadRouter.post('/:id/follow-up', checkPermission('leads'), async (req, res) => {
   const lead = await Lead.findById(req.params.id);
