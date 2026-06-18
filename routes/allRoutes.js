@@ -606,6 +606,10 @@ scrumRouter.get('/:id', checkPermission('scrum'), async (req, res) => {
   const data = await ScrumEntry.findById(req.params.id).populate('scrumMaster', 'name').populate('entries.employee').populate('project', 'name');
   res.json({ success: true, data });
 });
+scrumRouter.delete('/:id', checkPermission('scrum'), async (req, res) => {
+  await ScrumEntry.findByIdAndDelete(req.params.id);
+  res.json({ success: true });
+});
 scrumRouter.put('/:id', checkPermission('scrum'), async (req, res) => {
   const data = await ScrumEntry.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
