@@ -241,8 +241,29 @@ exports.createInvoice = async (req, res) => {
 };
 
 exports.updateInvoice = async (req, res) => {
-  const invoice = await Invoice.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+  const invoice = await Invoice.findById(req.params.id);
   if (!invoice) return res.status(404).json({ success: false, message: 'Invoice not found' });
+
+  // Apply all incoming changes
+  Object.assign(invoice, req.body);
+
+  // Recalculate paymentStatus based on new grandTotal
+  const grandTotal = invoice.pricing?.grandTotal || 0;
+  const paidAmount = invoice.paymentStatus?.paidAmount || 0;
+  invoice.paymentStatus.pendingAmount = Math.max(0, grandTotal - paidAmount);
+
+  // Fix status if grandTotal changed
+  if (invoice.status !== 'cancelled') {
+    if (paidAmount <= 0) {
+      invoice.status = invoice.status === 'draft' ? 'draft' : 'sent';
+    } else if (paidAmount >= grandTotal) {
+      invoice.status = 'paid';
+    } else {
+      invoice.status = 'partial';
+    }
+  }
+
+  await invoice.save();
   res.json({ success: true, data: invoice, message: 'Invoice updated' });
 };
 
