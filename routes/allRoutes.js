@@ -585,9 +585,29 @@ projectRouter.post('/:id/update', checkPermission('projects'), async (req, res) 
 module.exports.projectRouter = projectRouter;
 
 // ---- SCRUM ----
+// ---- SCRUM ----
 const scrumRouter = express.Router();
 const { ScrumEntry } = require('../models/index');
+
+
 scrumRouter.use(protect);
+
+// Helper: only admin/super_admin allowed
+const adminOnly = (req, res, next) => {
+  if (!['admin', 'super_admin'].includes(req.user.role)) {
+    return res.status(403).json({ success: false, message: 'Only admin/super admin can access this' });
+  }
+  next();
+};
+
+// Helper: compute 14-day window from a start date
+const getScrumWindow = (startDate) => {
+  const start = new Date(startDate);
+  const end = new Date(start);
+  end.setDate(end.getDate() + 14);
+  return { startDate: start, endDate: end };
+};
+
 scrumRouter.get('/', checkPermission('scrum'), async (req, res) => {
   const { date, type, project, page = 1, limit = 20 } = req.query;
   const query = {};
@@ -598,22 +618,111 @@ scrumRouter.get('/', checkPermission('scrum'), async (req, res) => {
   const data = await ScrumEntry.find(query).sort('-date').skip((page-1)*limit).limit(parseInt(limit)).populate('scrumMaster', 'name').populate('entries.employee');
   res.json({ success: true, data, pagination: { total, pages: Math.ceil(total/limit) } });
 });
+
+// NEW — list all scrum masters with their auto-computed 2-week window
+scrumRouter.get('/masters', checkPermission('scrum'), adminOnly, async (req, res) => {
+  const masters = await User.find({ role: 'scrum_master', isActive: true }).select('name email scrumPeriodStart');
+  const data = masters.map(m => ({
+    _id: m._id,
+    name: m.name,
+    email: m.email,
+    scrumPeriodStart: m.scrumPeriodStart,
+    ...(m.scrumPeriodStart ? getScrumWindow(m.scrumPeriodStart) : { startDate: null, endDate: null })
+  }));
+  res.json({ success: true, data });
+});
+
+// NEW — admin/super_admin report: all entries for a scrum master within their date range, grouped by employee
+scrumRouter.get('/report', checkPermission('scrum'), adminOnly, async (req, res) => {
+  const { scrumMaster, fromDate, toDate, status } = req.query;
+  if (!scrumMaster) {
+    return res.status(400).json({ success: false, message: 'scrumMaster is required' });
+  }
+  
+
+  const query = { scrumMaster };
+  if (fromDate && toDate) {
+    query.date = { $gte: new Date(fromDate), $lte: new Date(toDate) };
+  }
+
+  const sessions = await ScrumEntry.find(query)
+    .sort('date')
+    .populate('entries.employee')
+    .populate('project', 'name');
+
+  // Group by employee
+  const employeeMap = {};
+  sessions.forEach(session => {
+    session.entries.forEach(entry => {
+      const empId = entry.employee?._id?.toString();
+      if (!empId) return;
+      if (!employeeMap[empId]) {
+        employeeMap[empId] = {
+          employee: entry.employee,
+          days: [],
+          totalAccuracy: 0,
+          count: 0
+        };
+      }
+      employeeMap[empId].days.push({
+        date: session.date,
+        type: session.type,
+        morningData: entry.morningData,
+        eveningData: entry.eveningData,
+        queries: entry.queries,
+        accuracyScore: entry.accuracyScore
+      });
+      employeeMap[empId].totalAccuracy += (entry.accuracyScore || 0);
+      employeeMap[empId].count += 1;
+    });
+  });
+
+  let result = Object.values(employeeMap).map((e) => ({
+    employee: e.employee,
+    days: e.days,
+    overallAccuracy: e.count ? Math.round(e.totalAccuracy / e.count) : 0
+  }));
+
+  // Optional status filter — checks if ANY task across the employee's days matches the flag
+  if (status) {
+    result = result.filter(emp =>
+      emp.days.some(day => {
+        const tasks = [
+          ...(day.morningData?.plannedTasks || []),
+          ...(day.eveningData?.completedTasks || [])
+        ];
+        return tasks.some(t => t.statusFlags && t.statusFlags[status]);
+      })
+    );
+  }
+
+  res.json({ success: true, data: result });
+});
+
 scrumRouter.post('/', checkPermission('scrum'), async (req, res) => {
+  // Auto-set scrumPeriodStart the first time a scrum_master submits an entry
+  if (req.user.role === 'scrum_master' && !req.user.scrumPeriodStart) {
+    await User.findByIdAndUpdate(req.user.id, { scrumPeriodStart: new Date() });
+  }
   const entry = await ScrumEntry.create({ ...req.body, scrumMaster: req.user.id });
   res.status(201).json({ success: true, data: entry });
 });
+
 scrumRouter.get('/:id', checkPermission('scrum'), async (req, res) => {
   const data = await ScrumEntry.findById(req.params.id).populate('scrumMaster', 'name').populate('entries.employee').populate('project', 'name');
   res.json({ success: true, data });
 });
+
 scrumRouter.delete('/:id', checkPermission('scrum'), async (req, res) => {
   await ScrumEntry.findByIdAndDelete(req.params.id);
   res.json({ success: true });
 });
+
 scrumRouter.put('/:id', checkPermission('scrum'), async (req, res) => {
   const data = await ScrumEntry.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ success: true, data });
 });
+
 module.exports.scrumRouter = scrumRouter;
 
 // ---- LEADS ----

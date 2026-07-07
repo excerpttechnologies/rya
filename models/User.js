@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
   password: { type: String, required: true, minlength: 6, select: false },
+  
   role: {
     type: String,
     enum: ['super_admin', 'admin', 'manager', 'employee', 'scrum_master', 'accountant', 'hr'],
@@ -22,16 +23,18 @@ const userSchema = new mongoose.Schema({
     expenses: { type: Boolean, default: false },
     employees: { type: Boolean, default: false },
     salaries: { type: Boolean, default: false },
+    attendance: { type: Boolean, default: false }, 
     products: { type: Boolean, default: false },
     ledger: { type: Boolean, default: false },
     reports: { type: Boolean, default: false },
     projects: { type: Boolean, default: false },
     scrum: { type: Boolean, default: false },
-    leads: { type: Boolean, default: false },
+    scrumReport: { type: Boolean, default: false }, 
     company: { type: Boolean, default: false },
     users: { type: Boolean, default: false },
     ai: { type: Boolean, default: false }
   },
+  scrumPeriodStart: { type: Date, default: null }, // ✅ moved here — top-level field, set automatically when a scrum_master starts tracking
   avatar: { type: String, default: null },
   phone: { type: String },
   department: { type: String },
@@ -77,6 +80,15 @@ userSchema.methods.getSignedJwtToken = function () {
     process.env.JWT_SECRET,
     { expiresIn: process.env.JWT_EXPIRE || '7d' }
   );
+};
+
+// add near matchPassword / getSignedJwtToken methods
+userSchema.methods.getScrumPeriod = function () {
+  if (!this.scrumPeriodStart) return null;
+  const start = new Date(this.scrumPeriodStart);
+  const end = new Date(start);
+  end.setDate(end.getDate() + 14);
+  return { startDate: start, endDate: end };
 };
 
 module.exports = mongoose.model('User', userSchema);

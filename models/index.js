@@ -149,7 +149,10 @@ const employeeSchema = new mongoose.Schema({
   exitReason: String,
   skills: [String],
   performanceScore: { type: Number, min: 0, max: 100 },
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  // add to employeeSchema, near userId
+scrumMaster: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
+project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project', default: null },
 }, { timestamps: true });
 
 employeeSchema.pre('save', async function(next) {
@@ -299,26 +302,47 @@ projectSchema.pre('save', async function (next) {
 });
 
 // ========== SCRUM MODEL ==========
+const taskStatusFlags = {
+  completed: { type: Boolean, default: false },
+  inProgress: { type: Boolean, default: false },
+  pending: { type: Boolean, default: false },
+  notCompleted: { type: Boolean, default: false },
+  deadlineReached: { type: Boolean, default: false },
+  needsMoreTime: { type: Boolean, default: false },
+  willCompleteToday: { type: Boolean, default: false },
+  needsHelp: { type: Boolean, default: false },
+  hasDoubt: { type: Boolean, default: false }
+};
+
 const scrumEntrySchema = new mongoose.Schema({
   date: { type: Date, required: true },
   type: { type: String, enum: ['morning', 'evening'], required: true },
   scrumMaster: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
+  project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' }, // no longer required in the form, kept optional
   entries: [{
     employee: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee' },
     morningData: {
       yesterdayWork: String,
       todayPlan: String,
       blockers: String,
-      plannedTasks: [{ task: String, estimatedHours: Number }]
+      plannedTasks: [{
+        task: String,
+        estimatedHours: Number,
+        statusFlags: taskStatusFlags   // NEW — per-task checkboxes
+      }]
     },
     eveningData: {
       completedWork: String,
       pendingWork: String,
       status: { type: String, enum: ['completed', 'partial', 'not_done'], default: 'partial' },
-      completedTasks: [{ task: String, hoursSpent: Number }],
+      completedTasks: [{
+        task: String,
+        hoursSpent: Number,
+        statusFlags: taskStatusFlags   // NEW — per-task checkboxes
+      }],
       challenges: String
     },
+    queries: { type: String, default: '' }, // NEW — free-text, any number of queries written as one block
     accuracyScore: { type: Number, min: 0, max: 100 },
     productivityScore: { type: Number, min: 0, max: 100 }
   }],
